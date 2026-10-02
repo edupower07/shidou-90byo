@@ -3,7 +3,7 @@
 次の学習指導要領（中央教育審議会 教育課程企画特別部会「審議まとめ（案）」2026年9月）の「変わる・変わらない」を、90秒の図解動画と一枚まとめで紹介するサイトです。
 
 - サイト：https://edupower07.github.io/shidou-90byo/
-- 動画：YouTube「全力先生」チャンネル
+- 発信：X（https://x.com/Edupower07）・Instagram（https://www.instagram.com/edupower07/）・note（https://note.com/edupower07）・Voicy（https://voicy.jp/channel/1026318）
 - 作成：全力先生（@edupower07）
 
 ## 中身

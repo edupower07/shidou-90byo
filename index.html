@@ -75,6 +75,10 @@ h1 .big { font-family: var(--f-num); font-weight: 300; font-size: 1.42em; line-h
 .lead em { font-style: normal; font-weight: 700; color: var(--ink); padding-bottom: 2px; border-bottom: 2px solid; }
 .lead em.k { border-color: var(--keep); }
 .lead em.c { border-color: var(--change); }
+.hero-note { margin: 22px 0 0; font-size: 13px; color: var(--ink-2); letter-spacing: .04em; }
+.hero-note a { margin-left: .6em; color: var(--ink); white-space: nowrap; }
+.one-terms { margin-top: .8em; font-size: 13px; }
+.sns { display: inline-flex; flex-wrap: wrap; gap: 4px 18px; }
 .hero-act { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; margin-top: 44px; }
 .toc { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 34px 0 0; padding: 0; list-style: none; font-size: 12.5px; letter-spacing: .14em; color: var(--muted); animation: fade 1s var(--ease) both; }
 .toc a { display: inline-flex; align-items: baseline; gap: 6px; }
@@ -90,10 +94,10 @@ h1 .big { font-family: var(--f-num); font-weight: 300; font-size: 1.42em; line-h
 h1 .l > span { animation: rise 1.1s var(--ease) both; }
 h1 .l:nth-child(1) > span { animation-delay: .08s; }
 h1 .l:nth-child(2) > span { animation-delay: .2s; }
-.kicker, .lead, .hero-act, .tate, .strip { animation: fade 1s var(--ease) both; }
+.kicker, .lead, .hero-act, .hero-note, .tate, .strip { animation: fade 1s var(--ease) both; }
 .kicker { animation-delay: 0s; }
 .lead { animation-delay: .5s; }
-.hero-act { animation-delay: .65s; }
+.hero-act, .hero-note { animation-delay: .65s; }
 .toc { animation-delay: .75s; }
 .tate { animation-delay: .8s; }
 .strip { animation-delay: .9s; }
@@ -156,7 +160,8 @@ h1 .l:nth-child(2) > span { animation-delay: .2s; }
 .about dt { color: var(--muted); letter-spacing: .12em; }
 .about dd { margin: 0; }
 
-.terms { max-width: 720px; padding-block: 88px 0; }
+.terms { padding-block: 96px 0; }
+.terms-box { max-width: 760px; padding: 32px 36px 22px; background: var(--white); border: 1px solid var(--line-2); border-left: 3px solid var(--ink); }
 .terms h2 { font-family: var(--f-min); font-weight: 500; font-size: 20px; letter-spacing: .12em; margin: 0 0 18px; }
 .terms p { margin: 0 0 1em; color: var(--ink-2); }
 .terms .mail { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 4px; }
@@ -314,6 +319,7 @@ h1 .l:nth-child(2) > span { animation-delay: .2s; }
   .hd { padding-inline: 16px; }
   .hd nav { gap: 16px; letter-spacing: .08em; }
   .hd nav .lg { display: none; }
+  .terms-box { padding: 24px 20px 14px; }
   .brand { padding-right: 12px; }
   .hero { padding-block: 56px 40px; }
   .row a { grid-template-columns: 44px minmax(0, 1fr) 88px; gap: 0 14px; padding: 16px 0; }
@@ -343,7 +349,7 @@ h1 .l:nth-child(2) > span { animation-delay: .2s; }
 <header class="hd" id="hd">
   <div class="frame">
     <a class="brand" href="#top">90秒でわかる次期学習指導要領</a>
-    <nav><a class="ul" href="#index">目次</a><a class="ul" href="#shiryo"><span class="lg">文科省の</span>新資料</a><a class="ul" href="https://www.youtube.com/@%E5%85%A8%E5%8A%9B%E5%85%88%E7%94%9F" target="_blank" rel="noopener">YouTube ↗</a></nav>
+    <nav><a class="ul" href="#index">目次</a><a class="ul" href="#shiryo"><span class="lg">文科省の</span>新資料</a><a class="ul" href="#terms">ご利用<span class="lg">について</span></a></nav>
   </div>
 </header>
 <div id="top">
@@ -354,6 +360,7 @@ h1 .l:nth-child(2) > span { animation-delay: .2s; }
         <h1><span class="l"><span><span class="big">90</span>秒でわかる</span></span><span class="l"><span>次期学習指導要領</span></span></h1>
         <p class="lead">次の学習指導要領で<em class="k">変わらないこと</em>と<em class="c">変わること</em>を、1本90秒の動画と、A4一枚のまとめに。毎日1本、30日間の記録です。</p>
         <div class="hero-act"><a class="btn" href="#ep1">第1回から見る <span class="ar">→</span></a><a class="lnk ul" href="#index">目次を見る</a></div>
+        <p class="hero-note">研修での配布・転載・二次利用は、事前にご連絡ください。<a class="ul" href="#terms">ご利用について →</a></p>
         <ul class="toc" id="toc"></ul>
       </div>
       <p class="tate">九十秒で、次の学習指導要領を。</p>
@@ -383,6 +390,14 @@ h1 .l:nth-child(2) > span { animation-delay: .2s; }
       <ol class="rows" id="dxrows"></ol>
     </section>
 
+    <section class="terms frame" id="terms">
+      <div class="terms-box">
+        <h2>ご利用について</h2>
+        <p>このサイトの動画・文章・一枚まとめ・教科別まとめを、二次利用したり、ほかの場所に転載したり、研修や講座などで活用したりする場合は、事前にご連絡ください。</p>
+        <p class="mail">連絡先　<code id="mail">edupower.zenryoku07@gmail.com</code><button type="button" class="ul" id="copymail">アドレスをコピー</button></p>
+        <p>内容は文部科学省の審議まとめ（案）や会議の配付資料にもとづいて作っていますが、まだ「案」や検討中の段階のものを含みます。正確な内容は、必ず原典で確かめてください。</p>
+      </div>
+    </section>
     <section class="about frame">
       <h2>このサイトについて</h2>
       <div>
@@ -393,7 +408,7 @@ h1 .l:nth-child(2) > span { animation-delay: .2s; }
         <dl>
           <dt>出典</dt><dd>教育課程企画特別部会「次期学習指導要領等に向けた審議まとめ（案）」2026年9月（文部科学省）<br>文科省の新資料：中央教育審議会 初等中等教育分科会 デジタル学習基盤特別委員会（第11回）配付資料 2026年10月1日</dd>
           <dt>作成</dt><dd>全力先生（@edupower07）</dd>
-          <dt>動画</dt><dd><a class="ul" href="https://www.youtube.com/@%E5%85%A8%E5%8A%9B%E5%85%88%E7%94%9F" target="_blank" rel="noopener">YouTube「全力先生」チャンネル ↗</a></dd>
+          <dt>発信</dt><dd class="sns"><a class="ul" href="https://x.com/Edupower07" target="_blank" rel="noopener">X ↗</a><a class="ul" href="https://www.instagram.com/edupower07/" target="_blank" rel="noopener">Instagram ↗</a><a class="ul" href="https://note.com/edupower07" target="_blank" rel="noopener">note ↗</a><a class="ul" href="https://voicy.jp/channel/1026318" target="_blank" rel="noopener">Voicy ↗</a></dd>
         </dl>
       </div>
     </section>
@@ -402,12 +417,6 @@ h1 .l:nth-child(2) > span { animation-delay: .2s; }
       <p>90秒動画より詳しく、図解を交えてA4数ページにまとめた、印刷用の資料です。教科・領域ごとに14本あります。</p>
       <ul id="subjlist"></ul>
     </section>
-    <section class="terms frame" id="terms">
-      <h2>ご利用について</h2>
-      <p>このサイトの動画・文章・一枚まとめ・教科別まとめを、二次利用したり、ほかの場所に転載したり、研修や講座などで活用したりする場合は、事前にご連絡ください。</p>
-      <p class="mail">連絡先　<code id="mail">edupower.zenryoku07@gmail.com</code><button type="button" class="ul" id="copymail">アドレスをコピー</button></p>
-      <p>内容は文部科学省の審議まとめ（案）にもとづいて作っていますが、まだ「案」の段階です。正確な内容は、必ず原典で確かめてください。</p>
-    </section>
   </main>
 
   <div id="detail" hidden></div>
@@ -415,6 +424,7 @@ h1 .l:nth-child(2) > span { animation-delay: .2s; }
   <footer class="ft frame">
     <span>90秒でわかる次期学習指導要領　作成：全力先生（@edupower07）</span>
     <span>※どれもまだ「案」の段階です</span>
+    <span class="sns"><a class="ul" href="https://x.com/Edupower07" target="_blank" rel="noopener">X ↗</a><a class="ul" href="https://www.instagram.com/edupower07/" target="_blank" rel="noopener">Instagram ↗</a><a class="ul" href="https://note.com/edupower07" target="_blank" rel="noopener">note ↗</a><a class="ul" href="https://voicy.jp/channel/1026318" target="_blank" rel="noopener">Voicy ↗</a></span>
     <a class="ul" href="#subjects">教科別まとめ</a>
     <a class="ul" href="#terms">ご利用について</a>
     <a class="ul" href="#top">↑ 上へ</a>
@@ -575,12 +585,12 @@ function showDetail(n, list = EPS) {
     <p class="d-q">${esc(e.q)}</p>${(e.lead || []).length ? `<p class="d-lead">${e.lead.map(esc).join('<br>')}</p>` : ''}
     <div class="player"${ytid(e) ? ` role="button" tabindex="0" data-yt="${ytid(e)}" aria-label="${esc(e.title)}の動画を再生"` : ''}><img src="${e.thumb}" alt="${esc(e.title)}の動画のサムネイル"><span class="play" aria-hidden="true"><i></i></span></div>
     <p class="cap">${ytid(e) ? '押すと、YouTube の動画（横・約90秒）がここで再生されます。' : 'この回の動画は、YouTube に公開したあとここで再生できるようになります。'}</p>
-    <div class="d-tools"><a class="ul" href="${e.youtube || 'https://www.youtube.com/@%E5%85%A8%E5%8A%9B%E5%85%88%E7%94%9F'}" target="_blank" rel="noopener">YouTube で見る ↗</a><button type="button" class="ul" id="copy">この回のリンクをコピー</button></div>
+    <div class="d-tools">${e.youtube ? `<a class="ul" href="${e.youtube}" target="_blank" rel="noopener">YouTube で見る ↗</a>` : ''}<button type="button" class="ul" id="copy">この回のリンクをコピー</button></div>
     <div class="kc${cols(e)}">${e.blocks.map((b) => `<section class="${b.kind}"><h3><i></i>${esc(b.head)}</h3>${items(b, 'note')}</section>`).join('')}</div>
     ${e.closing.length ? `<p class="closing"><small>ひとこと</small>${e.closing.map(esc).join('<br>')}</p>` : ''}
     <section class="one">
       <div class="one-hd">
-        <div><h3>一枚まとめ</h3><p>学年会や校内研修でそのまま配れるように、この回の要点をA4縦一枚にしました。「この1枚を印刷する」から、印刷やPDFでの保存ができます（印刷の画面で保存先を「PDFに保存」に）。</p></div>
+        <div><h3>一枚まとめ</h3><p>学年会や校内研修でそのまま配れるように、この回の要点をA4縦一枚にしました。「この1枚を印刷する」から、印刷やPDFでの保存ができます（印刷の画面で保存先を「PDFに保存」に）。</p><p class="one-terms">配布・転載・研修での活用については、<a class="ul" href="#terms">ご利用について</a>をご覧ください。</p></div>
         <div><dl><dt>大きさ</dt><dd>A4縦</dd><dt>色</dt><dd>白黒で印刷しても読める配色</dd><dt>QR</dt><dd>${e.qr ? '右下のQRから、この回の動画へ' : 'YouTube に公開したあと、動画のQRコードが入ります'}</dd></dl>
         <div class="one-act"><button type="button" class="ul" id="print">この1枚を印刷する</button>${e.series ? '' : '<a class="ul" href="pdf/一枚まとめ_全30回.pdf" target="_blank" rel="noopener">30枚まとめた PDF ↗</a>'}</div></div>
       </div>
